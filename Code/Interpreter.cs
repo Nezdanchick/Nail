@@ -1,28 +1,20 @@
 ﻿using System;
+using System.Net.WebSockets;
 using System.Xml.Linq;
 
 namespace Nail.Code
 {
-    public static class Interpreter
+    public class Interpreter
     {
-        public static void Run(string code)
-        {
-            var args = code.Split(' ');
-            foreach (var arg in args)
-            {
-                Console.Write(arg + " ");
-            }
-        }
+        private readonly string _code;
 
-        private static bool IsBracket(this char c) =>
-            c == '(' || c == '[' || c == '{' || c == '<';
-        private static string ParseBracket(this string code)
+        public Interpreter(string code) => _code = code;
+
+        public void Run()
         {
-            // find close bracket '(' is ')', '[' is ']', etc.
-            //char b = e == '(' ? ')' : e == '[' ? ']' : e == '{' ? '}' : ' ';
-            //return code[++i..code.IndexOf(b, i)]);
-            return code;
+            using var stream = new CodeStream(_code);
+            Console.WriteLine(stream.ReadToEnd());
+            stream.Crash("test");
         }
-        //TODO: simplify Parse_??? methods creation process
     }
 }

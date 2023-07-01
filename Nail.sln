@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nail", "Nail\Nail.csproj", "{FFB539AE-8DE6-45B0-98E3-81746743DC34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nail", "Nail\Nail.csproj", "{FFB539AE-8DE6-45B0-98E3-81746743DC34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code", "Interpreter\Code.csproj", "{CD552FD7-B973-466F-A336-3C837C2E897C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Code", "Code\Code.csproj", "{BCC0C9F5-2851-461D-8648-9ADBADF1DF53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{FFB539AE-8DE6-45B0-98E3-81746743DC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFB539AE-8DE6-45B0-98E3-81746743DC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFB539AE-8DE6-45B0-98E3-81746743DC34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD552FD7-B973-466F-A336-3C837C2E897C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD552FD7-B973-466F-A336-3C837C2E897C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD552FD7-B973-466F-A336-3C837C2E897C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD552FD7-B973-466F-A336-3C837C2E897C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC0C9F5-2851-461D-8648-9ADBADF1DF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC0C9F5-2851-461D-8648-9ADBADF1DF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC0C9F5-2851-461D-8648-9ADBADF1DF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC0C9F5-2851-461D-8648-9ADBADF1DF53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

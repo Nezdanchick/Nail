@@ -22,7 +22,7 @@ namespace Nail
 
             Console.WriteLine(_welcome);
             Console.WriteLine(_help);
-
+            Run("help");
             string? line = "";
             while (line != "exit")
             {
@@ -41,7 +41,7 @@ namespace Nail
         {
             if (File.Exists(arg)) // if arg is path
                 arg = File.ReadAllText(arg); // convert path to code
-            Interpreter.Run(arg); // run code
+            new Interpreter(arg).Run(); // run code
         }
     }
 }
