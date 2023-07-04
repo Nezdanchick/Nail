@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "run",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Nail/bin/Debug/net6.0/Nail.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Nail",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

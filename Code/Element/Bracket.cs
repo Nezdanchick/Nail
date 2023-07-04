@@ -1,9 +1,12 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using Nail.Code.Table;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Nail.Code.Element
 {
     internal class Bracket : IElement
     {
+        public string Type => Token.Bracket.ToString();
+
         public bool IsElement(char c) =>
             c == '(' || c == '[' || c == '{' || c == '<';
         public string Parse(string code)

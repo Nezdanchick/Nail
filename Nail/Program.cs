@@ -6,7 +6,6 @@ namespace Nail
     {
         private const string _welcome = "Welcome to nail!\n" +
             "Nail is Nezdanchick's Awesome Interpreted Language";
-        private const string _help = "help:\n";
         private const string _prompt = ">";
 
         private static void Main(string[] args)
@@ -21,18 +20,15 @@ namespace Nail
             } // run args and exit
 
             Console.WriteLine(_welcome);
-            Console.WriteLine(_help);
-            Run("help");
+
             string? line = "";
             while (line != "exit")
             {
                 Console.Write(_prompt);
                 line = Console.ReadLine();
 
-                if (line == null)
+                if (line == null || line == "")
                     continue;
-                if (line == "" || line == "help")
-                    Console.WriteLine(_help);
                 Run(line);
                 Console.WriteLine();
             } // run every user command and exit on "exit" command

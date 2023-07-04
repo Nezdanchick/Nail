@@ -1,0 +1,4 @@
+﻿// test code for Nail
+
+Console.WriteLine("Hello, World!");
+var line = Console.ReadLine();
