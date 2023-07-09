@@ -1,11 +1,12 @@
-﻿using Nail.Code.Table;
-
-namespace Nail.Code.Element
+﻿namespace Nail.Code.Element
 {
     public interface IElement
     {
+        /// <summary>
+        /// String, represents type of code element
+        /// </summary>
         public string Type { get; }
         public bool IsElement(char character);
-        public string Parse(string code);
+        public int Parse(string code);
     }
 }

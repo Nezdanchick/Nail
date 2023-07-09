@@ -1,4 +1,5 @@
 ﻿using Nail.Code;
+using Nail.Code.Element;
 
 namespace Nail
 {
@@ -11,6 +12,10 @@ namespace Nail
         private static void Main(string[] args)
         {
             Console.Title = $"Nail";
+
+            { // add default code elements
+                Parser.Add(new Bracket());
+            }
 
             if (args.Length > 0)
             {

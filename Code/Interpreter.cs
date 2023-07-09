@@ -10,12 +10,8 @@ namespace Nail.Code
         public string Code { get => _code ?? ""; }
         private readonly string? _code;
 
-        public Interpreter(string code) : this() =>
+        public Interpreter(string code) =>
             _code = code;
-        private Interpreter()
-        {
-            Parser.Add(new Bracket());
-        }
 
         public void Run()
         {

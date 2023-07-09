@@ -1,21 +1,28 @@
 ﻿using Nail.Code.Table;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Nail.Code.Element
 {
-    internal class Bracket : IElement
+    public class Bracket : IElement
     {
         public string Type => Token.Bracket.ToString();
 
         public bool IsElement(char c) =>
-            c == '(' || c == '[' || c == '{' || c == '<';
-        public string Parse(string code)
+            c == '(' || c == '{' || c == '[';
+        public int Parse(string code)
         {
-            // find close bracket '(' is ')', '[' is ']', etc.
             char s = code[0];
-            char e = s == '(' ? ')' : s == '[' ? ']' : s == '{' ? '}' : s == '<' ? '>' : ' ';
-            if (e == ' ') return "";
-            return code[0..code.IndexOf(e)];
+            var e = s switch
+            {
+                '(' => ')',
+                '{' => '}',
+                '[' => ']',
+                _ => throw new Exception("Parser error: not a bracket"),
+            };
+            int result = code.IndexOf(e);
+            if (result == -1)
+                throw new Exception("Сlosing bracket required");
+
+            return result;
         }
     }
 }
